@@ -17,6 +17,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String SHARED_PREFS = "sharedPrefs";
+
+
     EditText DL_TextBox;
     EditText Squat_TextBox;
     EditText BP_TextBox;
@@ -78,8 +81,9 @@ public class MainActivity extends AppCompatActivity {
                 STM_View.setText(String.valueOf(currentLifts.get_squatTM()));
                 BPTM_View.setText(String.valueOf(currentLifts.get_BPTM()));
                 OHP_View.setText(String.valueOf(currentLifts.get_ohp()));
+                saveData();
 
-                //SharedPreferences.Editor editor =
+
             }
         });
 
@@ -90,4 +94,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public void saveData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putFloat("newDL", currentLifts.get_deadlift());
+        editor.putFloat("newSQ", currentLifts.get_squat());
+        editor.putFloat("newBP", currentLifts.get_bench_press());
+        editor.putFloat("newOHP", currentLifts.get_ohp());
+
+        editor.apply();
+    }
+
+
 }
