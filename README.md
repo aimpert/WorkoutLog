@@ -6,11 +6,14 @@ Fundamentally, a workout log app is something that can be contionously expanded 
 weightlifting app as it is the current routine I am running. Therefore modularity is something to work on, as allowing the user to customize their workout plan 
 beyond 5/3/1 will add a ton of flexibility and depth to the application.
 
-August Priority List:
+**August Priority List:**
 
 ~~1. Create a functioning training max (TM) and one rep max (1RM) calculator.~~
 
-2. Store this data somewhere so that it can be accessed between activities.
+~~2. Store this data somewhere so that it can be accessed between activities.~~ - **08/19**
+      
+      Current lifts are stored in an object, which are then saved in SharedPreferences and
+      can not only be accessed through activities but upon closing the application as well.
 
 3. Choose a system for archiving old data (previous 1RMs, TMs).
 
