@@ -15,11 +15,19 @@ beyond 5/3/1 will add a ton of flexibility and depth to the application.
       Current lifts are stored in an object, which are then saved in SharedPreferences and
       can not only be accessed through activities but upon closing the application as well.
 
-3. Choose a system for archiving old data (previous 1RMs, TMs).
+3. Create a flexible home page
 
-4. Develop a log for these old numbers.
+      * ~~Window with current 1RMs~~
+      * Edit 1RMs button
+      * Toolbar to access TM calculator, 1RM calculator
+      * UI Improvements/Usability
 
-5. Clean and optimize application.
-    * Error handling
-    * Test cases
-    * Usability
+4. Choose a system for archiving old data (previous 1RMs, TMs).
+
+5. Develop a log for these old numbers.
+
+6. Clean and optimize application.
+
+      * Error handling
+      * Test cases
+      * Usability
