@@ -15,14 +15,14 @@ beyond 5/3/1 will add a ton of flexibility and depth to the application.
       Current lifts are stored in an object, which are then saved in SharedPreferences and
       can not only be accessed through activities but upon closing the application as well.
 
-~~3. First launch window ~~ - **08/31**
+~~3. First launch window.~~ - **08/31**
 
       Used SharedPreferences to check whether the app is on its first launch, same version,
       or an upgraded version.
       
 **September Priority List:**
 
-1. Create a flexible home page
+1. Create a flexible home page.
 
       * ~~Window with current 1RMs~~
       * ~~Edit 1RMs button~~ - **08/31**
