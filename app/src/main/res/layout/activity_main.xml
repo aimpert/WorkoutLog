@@ -6,83 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/OHPTM"
-        android:layout_width="66dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="36dp"
-        android:gravity="right"
-        android:orientation="horizontal"
-        android:text="Overhead Press:"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/OHPTM_View"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/BPTM"
-        tools:visibility="visible" />
 
-    <TextView
-        android:id="@+id/OHPTM_View"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:text=""
-        android:textSize="12pt"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BPTM_View"
-        tools:text="ya"
-        tools:visibility="visible" />
-
-    <TextView
-        android:id="@+id/BPTM"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="40dp"
-        android:text="Bench Press:"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/BPTM_View"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/TMs_View"
-        tools:visibility="visible" />
-
-    <TextView
-        android:id="@+id/BPTM_View"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:text=""
-        android:textSize="12pt"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TMs_View"
-        tools:text="ya"
-        tools:visibility="visible" />
-
-    <TextView
-        android:id="@+id/STM"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="36dp"
-        android:text="Squat:"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/STM_View"
-        app:layout_constraintHorizontal_bias="0.352"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DLTM"
-        tools:visibility="visible" />
+    <include
+        android:id="@id/toolbar"
+        layout="@layout/toolbar"></include>
 
     <EditText
         android:id="@+id/BP_TextBox"
@@ -117,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:text="Bench Press"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Squat_TextBox" />
@@ -128,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:text="Overhead Press"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BP_TextBox" />
@@ -152,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:text="Squat"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DL_TextBox" />
@@ -161,12 +88,12 @@
         android:id="@+id/DL_Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:text="Deadlift"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <EditText
         android:id="@+id/DL_TextBox"
@@ -186,71 +113,11 @@
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OHP_TextBox" />
-
-    <TextView
-        android:id="@+id/TMs_View"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="28dp"
-        android:text="Training Maxes:"
-        android:textSize="12pt"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submit_button"
-        tools:visibility="visible" />
-
-    <TextView
-        android:id="@+id/DLTM_View"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:text=""
-        android:textSize="12pt"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/TMs_View"
-        tools:text="ya"
-        tools:visibility="visible" />
-
-    <TextView
-        android:id="@+id/STM_View"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:text=""
-        android:textSize="12pt"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/DLTM_View"
-        tools:text="ya"
-        tools:visibility="visible" />
-
-    <TextView
-        android:id="@+id/DLTM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="42dp"
-        android:text="Deadlift:"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/DLTM_View"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TMs_View"
-        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -265,11 +132,11 @@
         android:id="@+id/RM_Calc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="1RM Calculator"
-        android:textSize="8sp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/pop_background"
         android:padding="15dp"
+        android:text="1RM Calculator"
+        android:textSize="8sp"
         app:layout_constraintEnd_toStartOf="@+id/submit_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OHP_TextBox" />
@@ -278,9 +145,10 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="68dp"
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toEndOf="@+id/DL_Text"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_help" />
@@ -289,7 +157,7 @@
         android:id="@+id/next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:clickable="false"
         android:text="Next"
         app:layout_constraintEnd_toEndOf="parent"

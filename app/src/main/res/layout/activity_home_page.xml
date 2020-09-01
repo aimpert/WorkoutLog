@@ -7,6 +7,10 @@
     android:background="@color/cardview_light_background"
     tools:context=".HomePage">
 
+    <include
+        android:id="@id/toolbar"
+        layout="@layout/toolbar"></include>
+
     <TextView
         android:id="@+id/liftHeader"
         android:layout_width="wrap_content"
@@ -17,7 +21,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -31,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="303dp" />
+        app:layout_constraintGuide_begin="365dp" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -45,11 +49,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/liftHeader"
-        app:layout_constraintVertical_bias="0.13">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:animateLayoutChanges="false"
             android:orientation="vertical">
 
             <TextView
@@ -88,15 +93,5 @@
                 android:text="Overhead Press:" />
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/TM_Calc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Training Maxes"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
