@@ -30,14 +30,13 @@ public class MainActivity extends AppCompatActivity {
     GridView gridView;
 
 
-    Button Submit, RM_Calc, Next, Home_button;
+    Button RM_Calc, Next, Home_button;
     lifts currentLifts = new lifts(0, 0, 0, 0);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("WORKOUTLOG", "MAIN created");
-
         //gridView = findViewById(R.id.gridView);
 
         DL_TextBox = findViewById(R.id.DL_TextBox);
@@ -47,9 +46,11 @@ public class MainActivity extends AppCompatActivity {
 
         Home_button = findViewById(R.id.Home_button);
 
-        Submit = findViewById(R.id.submit_button);
         Next = findViewById(R.id.next_button);
         RM_Calc = findViewById(R.id.RM_Calc);
+
+        enter_currentLifts();
+
         RM_Calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,30 +65,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                currentLifts.set_deadlift(Float.valueOf(DL_TextBox.getText().toString()));
-                currentLifts.set_squat(Float.valueOf(Squat_TextBox.getText().toString()));
-                currentLifts.set_bench_press(Float.valueOf(BP_TextBox.getText().toString()));
-                currentLifts.set_OHP(Float.valueOf(OHP_TextBox.getText().toString()));
-
-                saveData();
-
-
-            }
-        });
 
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                currentLifts.set_deadlift(Float.parseFloat(DL_TextBox.getText().toString()));
+                currentLifts.set_squat(Float.parseFloat(Squat_TextBox.getText().toString()));
+                currentLifts.set_OHP(Float.parseFloat(OHP_TextBox.getText().toString()));
+                currentLifts.set_bench_press(Float.parseFloat(BP_TextBox.getText().toString()));
+
+                saveData();
                 startActivity(new Intent(MainActivity.this, HomePage.class));
             }
         });
     }
     public void saveData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putFloat("newDL", currentLifts.get_deadlift());
         editor.putFloat("newSQ", currentLifts.get_squat());
@@ -97,5 +90,13 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
+    private void enter_currentLifts() {
+        SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
+        DL_TextBox.setText(String.valueOf(sharedPreferences.getFloat("newDL",0)));
+        Squat_TextBox.setText(String.valueOf(sharedPreferences.getFloat("newSQ",0)));
+        BP_TextBox.setText(String.valueOf(sharedPreferences.getFloat("newBP",0)));
+        OHP_TextBox.setText(String.valueOf(sharedPreferences.getFloat("newOHP",0)));
+
+    }
 
 }

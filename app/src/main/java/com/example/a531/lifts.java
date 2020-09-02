@@ -1,10 +1,10 @@
 package com.example.a531;
 
 public class lifts {
-    float deadlift;
-    float squat;
-    float bench_press;
-    float ohp;
+    private float deadlift;
+    private float squat;
+    private float bench_press;
+    private float ohp;
 
     public lifts(float deadlift,
             float squat,
@@ -29,7 +29,7 @@ public class lifts {
 
     public float get_squat()
     {
-        return deadlift;
+        return squat;
     }
 
     public double get_squatTM()
@@ -39,7 +39,7 @@ public class lifts {
 
     public float get_bench_press()
     {
-        return deadlift;
+        return bench_press;
     }
 
     public double get_BPTM()
