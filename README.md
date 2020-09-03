@@ -26,6 +26,7 @@ beyond 5/3/1 will add a ton of flexibility and depth to the application.
 
       * ~~Window with current 1RMs~~
       * ~~Edit 1RMs button~~ - **08/31**
+      * List of current week's days
       * Toolbar to access TM calculator, 1RM calculator
       * UI Improvements/Usability
 
