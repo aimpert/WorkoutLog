@@ -20,8 +20,6 @@ import android.widget.GridView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String SHARED_PREFS = "sharedPrefs";
-
 
     EditText DL_TextBox;
     EditText Squat_TextBox;

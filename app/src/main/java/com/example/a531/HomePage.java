@@ -3,10 +3,11 @@ package com.example.a531;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
 
 import android.view.View;
@@ -14,9 +15,14 @@ import android.widget.TextView;
 
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 
 public class HomePage extends AppCompatActivity {
 
+    private RecyclerView daysRV;
+    private RecyclerView.Adapter daysRV_adapter;
+    private RecyclerView.LayoutManager daysRV_manager;
     TextView DL_Header, SQ_Header, BP_Header, OHP_Header;
     Button Edit_button;
     lifts currentLifts = new lifts(0, 0, 0, 0);
@@ -38,6 +44,19 @@ public class HomePage extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ArrayList<dayItem> dayList = new ArrayList<>();
+        dayList.add(new dayItem("Day 1", "Deadlift"));
+        dayList.add(new dayItem("Day 2", "Bench Press"));
+        dayList.add(new dayItem("Day 3", "Squat"));
+        dayList.add(new dayItem("Day 4", "Overhead Press"));
+
+        daysRV = findViewById(R.id.RV);
+        daysRV.setHasFixedSize(true);
+        daysRV_manager = new LinearLayoutManager(this);
+        daysRV_adapter = new dayAdapter(dayList);
+        daysRV.setLayoutManager(daysRV_manager);
+        daysRV.setAdapter(daysRV_adapter);
 
         Edit_button.setOnClickListener(new View.OnClickListener() {
             @Override
