@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">531</string>
+    <string name="one_rep_maxes">One Rep Maxes</string>
+    <string name="deadlift">Deadlift:</string>
+    <string name="squat">Squat:</string>
+    <string name="bench_press">Bench Press:</string>
+    <string name="overhead_press">Overhead Press:</string>
 </resources>
