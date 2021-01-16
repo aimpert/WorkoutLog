@@ -20,22 +20,6 @@ beyond 5/3/1 will add a ton of flexibility and depth to the application.
       Used SharedPreferences to check whether the app is on its first launch, same version,
       or an upgraded version.
       
-**September Priority List:**
+**January Upadte**
 
-1. Create a flexible home page.
-
-      * ~~Window with current 1RMs~~
-      * ~~Edit 1RMs button~~ - **08/31**
-      * ~~List of current week's days~~ - **09/02**
-      * Toolbar to access TM calculator, 1RM calculator
-      * UI Improvements/Usability
-
-2. Choose a system for archiving old data (previous 1RMs, TMs).
-
-3. Develop a log for these old numbers.
-
-4. Clean and optimize application.
-
-      * Error handling
-      * Test cases
-      * Usability
+Currently working on individual lifting day pages.
