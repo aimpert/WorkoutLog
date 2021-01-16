@@ -20,6 +20,6 @@ beyond 5/3/1 will add a ton of flexibility and depth to the application.
       Used SharedPreferences to check whether the app is on its first launch, same version,
       or an upgraded version.
       
-**January Upadte**
+**January Update**
 
 Currently working on individual lifting day pages.
